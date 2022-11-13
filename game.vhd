@@ -61,7 +61,7 @@ end game;
 architecture RTL of game is
 -- Internal signal declarations
 -- <include new states>
-type stateType is (idle, writeToCSR0, setupGameParameters, initGameArena, initBall, initPaddle, initLives, initScore, waitState, processPaddle, processBall, writeBallToMem, writeWallToMem, endGame); -- declare enumerated state type
+type stateType is (idle, writeToCSR0, setupGameParameters, initGameArena, initBall, initPaddle, initLives, initScore, waitState, processPaddle, processBall, writeBallToMem, writeWallToMem, endGame, NW, N, NE, SE, S, SW); -- declare enumerated state type
 signal NS, CS                                   : stateType; -- declare FSM state 
 								                
 signal NSWallVec, CSWallVec                     : std_logic_vector(31 downto 0);
@@ -223,7 +223,6 @@ begin
 			if CSBallNumDlyCount = CSBallNumDlyMax then
 		   	   NSBallNumDlyCount   <= 0;
 
-
                -- < instructions>		      
 			   -- Perform ball zone checks with respect to boundaries, wall, paddle. 
 			   -- Assign signal zone, for reference only
@@ -232,6 +231,8 @@ begin
 	 	       -- loop to waitState or progress to endGame
 		
 			   -- Check if ZoneCentral Y4To13_X1To30, up or down  
+			   
+			   -- Step 1 find the zone in this state, we have 
 			   if CSBallYAdd >= 4 and CSBallYAdd <= 13 and CSBallXAdd >= 1 and CSBallXAdd <= 30 then  
 			      zone <= 1;
 				  if CSBallDir(2) = '1' then                        -- ball direction is up                               -- ball direction is up?
@@ -415,9 +416,44 @@ begin
            	else -- CSBallNumDlyCount != CSBallNumDlyMax 
 	           NSBallNumDlyCount <= CSBallNumDlyCount + 1; -- increment counter
            	   NS  <= waitState;
-           	end if;		
+           	end if;
+ 
+		when NW =>                                                          -- BB State for NW Direction
+             NSBallXAdd <= CSBallXAdd + 1;                                         
+             NSBallYAdd <= CSBallYAdd + 1;
+             NsBallDir <= "110";		
+			 NS <= writeBallToMem;		
       
-
+		when N =>                                                           -- BB State for N Direction
+             NSBallXAdd <= CSBallXAdd;                                         
+             NSBallYAdd <= CSBallYAdd + 1;
+             NsBallDir <= "";     		
+			 NS <= writeBallToMem;		
+			 
+		when NE =>                                                          -- BB State for NE active 
+             NSBallXAdd <= CSBallXAdd - 1;                                         
+             NSBallYAdd <= CSBallYAdd + 1;
+             NsBallDir <= "101";                                                            
+			 NS <= writeBallToMem;		
+			 			 
+		when SE =>                                                          -- BB State for SE Direction
+             NSBallXAdd <= CSBallXAdd - 1;                                         
+             NSBallYAdd <= CSBallYAdd - 1;
+             NsBallDir <= "001";		
+			 NS <= writeBallToMem;		
+			 
+		when S =>                                                           -- BB State for S Direction
+             NSBallXAdd <= CSBallXAdd; 
+             NSBallYAdd <= CSBallYAdd - 1;
+             NsBallDir <= "";	
+			 NS <= writeBallToMem;	
+			 	
+		when SW =>                                                          -- BB State for S Direction
+             NSBallXAdd <= CSBallXAdd + 1;
+             NSBallYAdd <= CSBallYAdd - 1;
+             NsBallDir <= "010";		
+			 NS <= writeBallToMem;				 
+			 
 		when writeBallToMem =>                                                           -- write new ball row
              wr                       <= '1'; 					        			      
              add(7 downto 5)          <= "010";                                          -- reg32x32 memory bank select 
