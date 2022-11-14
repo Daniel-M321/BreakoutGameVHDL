@@ -16,24 +16,65 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 74852
+INFO: [Synth 8-7075] Helper process launched with PID 41456
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'gameAndReg32x32' [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:32]
 INFO: [Synth 8-3491] module 'game' declared at 'C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:41' bound to instance 'game_i' of component 'game' [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:46]
 INFO: [Synth 8-638] synthesizing module 'game' [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:61]
 WARNING: [Synth 8-614] signal 'CSBallVec' is read in the process but is not in the sensitivity list [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:97]
 WARNING: [Synth 8-614] signal 'NSLives' is read in the process but is not in the sensitivity list [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:97]
-WARNING: [Synth 8-614] signal 'NSScore' is read in the process but is not in the sensitivity list [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:97]
 INFO: [Synth 8-256] done synthesizing module 'game' (0#1) [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'gameAndReg32x32' (0#1) [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:32]
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][31] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][30] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][29] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][28] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][27] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][26] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][25] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][24] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][23] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][22] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][21] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][20] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][19] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][18] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][17] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][16] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][15] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][14] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][13] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][12] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][11] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][10] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][9] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][8] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][7] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][6] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][5] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][4] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][3] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][2] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][1] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][0] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][31] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][30] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][29] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][28] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][27] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][26] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][25] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][24] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][23] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][22] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][21] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][20] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][19] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][18] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][17] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][16] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][15] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][14] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][13] in module game is either unconnected or has no load
@@ -42,127 +83,95 @@ WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][11] in module game is either unconn
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][10] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][9] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][8] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][7] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][6] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][5] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][4] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][3] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][2] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][1] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[2][0] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][31] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][30] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][29] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][28] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][27] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][26] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][25] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][24] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][23] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][22] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][21] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][20] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][19] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][18] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][17] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][16] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][15] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][14] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][13] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][12] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][11] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][10] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][9] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][8] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][7] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][6] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][5] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][4] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][3] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][2] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][1] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRA[1][0] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[0][1] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[0][0] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][31] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][30] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][29] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][28] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][27] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][23] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][22] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][21] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[2][20] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][31] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][30] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][29] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][23] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][22] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][21] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][15] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][14] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][13] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][12] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][11] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][10] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][9] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][8] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][7] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][6] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][5] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][4] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][3] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][2] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][1] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[1][0] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][31] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][30] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][29] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][28] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][27] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][26] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][25] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][24] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][23] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][22] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][21] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][20] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][19] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][18] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][17] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][16] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][15] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][14] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][13] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][12] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][11] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][10] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][7] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][6] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][5] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][4] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][3] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][2] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][1] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port reg4x32_CSRB[0][0] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[255] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[254] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[253] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[252] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[251] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[250] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[249] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[248] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[247] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[246] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[245] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[244] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[243] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[242] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[241] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[240] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[239] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[238] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[237] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[236] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[235] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[234] in module game is either unconnected or has no load
-WARNING: [Synth 8-7129] Port BRAM_dOut[233] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRB[3][31] in module game is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg4x32_CSRB[3][30] in module game is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'game'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                             0000 |                             0000
-     setupgameparameters |                             0001 |                             0010
-           initgamearena |                             0010 |                             0011
-                initball |                             0011 |                             0100
-              initpaddle |                             0100 |                             0101
-               waitstate |                             0101 |                             1000
-           processpaddle |                             0110 |                             1001
-             processball |                             0111 |                             1010
-                 endgame |                             1000 |                             1101
-             writetocsr0 |                             1001 |                             0001
-          writeballtomem |                             1010 |                             1011
-          writewalltomem |                             1011 |                             1100
+                    idle |                            00000 |                            00000
+     setupgameparameters |                            00001 |                            00010
+           initgamearena |                            00010 |                            00011
+               initlives |                            00011 |                            00110
+               initscore |                            00100 |                            00111
+                       n |                            00101 |                            10001
+          writeballtomem |                            00110 |                            01011
+          writewalltomem |                            00111 |                            01100
+         writescoretomem |                            01000 |                            01101
+               waitstate |                            01001 |                            01000
+           processpaddle |                            01010 |                            01001
+             processball |                            01011 |                            01010
+                 endgame |                            01100 |                            01111
+                       s |                            01101 |                            10100
+                      se |                            01110 |                            10011
+                      sw |                            01111 |                            10101
+                      ne |                            10000 |                            10010
+                      nw |                            10001 |                            10000
+         writelivestomem |                            10010 |                            01110
+                initball |                            10011 |                            00100
+              initpaddle |                            10100 |                            00101
+             writetocsr0 |                            10101 |                            00001
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'game'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -171,38 +180,35 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   21 Bit       Adders := 1     
-	   2 Input    5 Bit       Adders := 7     
-+---XORs : 
-	   2 Input     32 Bit         XORs := 1     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 6     
 +---Registers : 
 	               32 Bit    Registers := 35    
 	               21 Bit    Registers := 2     
 	                5 Bit    Registers := 8     
 	                3 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 12    
-	   3 Input   32 Bit        Muxes := 3     
-	  12 Input   32 Bit        Muxes := 3     
-	   2 Input   31 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 11    
+	  22 Input   32 Bit        Muxes := 4     
+	   3 Input   31 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 3     
 	   2 Input   21 Bit        Muxes := 1     
-	  12 Input   21 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 5     
-	  12 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 3     
-	   3 Input    7 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 26    
-	   3 Input    5 Bit        Muxes := 2     
-	  12 Input    5 Bit        Muxes := 6     
-	  12 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 3     
-	   2 Input    3 Bit        Muxes := 4     
-	   3 Input    3 Bit        Muxes := 2     
-	  12 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 2     
-	   3 Input    2 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 15    
-	   3 Input    1 Bit        Muxes := 35    
-	  12 Input    1 Bit        Muxes := 10    
+	  22 Input   21 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 7     
+	   3 Input    8 Bit        Muxes := 1     
+	  22 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 7     
+	   3 Input    5 Bit        Muxes := 1     
+	  22 Input    5 Bit        Muxes := 6     
+	  57 Input    5 Bit        Muxes := 1     
+	  22 Input    3 Bit        Muxes := 1     
+	  22 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 19    
+	   3 Input    1 Bit        Muxes := 33    
+	   4 Input    1 Bit        Muxes := 3     
+	   8 Input    1 Bit        Muxes := 1     
+	  22 Input    1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -221,247 +227,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-Found timing loop:
-     0: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     1: i_930/I4 (LUT6)
-     2: i_545/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     3: i_545/I5 (LUT6)
-     4: i_546/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     5: i_546/I5 (LUT6)
-     6: i_549/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     7: i_549/I4 (LUT6)
-     8: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     9: i_585/I4 (LUT6)
-    10: i_636/O (LUT4)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-    11: i_636/I3 (LUT4)
-    12: i_643/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-    13: i_643/I3 (LUT6)
-    14: i_927/O (LUT5)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-    15: i_927/I2 (LUT5)
-    16: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Inferred a: "set_disable_timing -from I4 -to O i_930"
-Found timing loop:
-     0: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     1: i_930/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     1: i_930/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     1: i_930/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_635/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_635/I3 (LUT6)
-     2: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     3: i_930/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Inferred a: "set_disable_timing -from I3 -to O i_635"
-Found timing loop:
-     0: i_545/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_545/I5 (LUT6)
-     2: i_546/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     3: i_546/I5 (LUT6)
-     4: i_549/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     5: i_549/I4 (LUT6)
-     6: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     7: i_585/I3 (LUT6)
-     8: i_923/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     9: i_923/I4 (LUT6)
-    10: i_589/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-    11: i_589/I5 (LUT6)
-    12: i_591/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-    13: i_591/I0 (LUT6)
-    14: i_594/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-    15: i_594/I2 (LUT6)
-    16: i_651/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-    17: i_651/I3 (LUT6)
-    18: i_652/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-    19: i_652/I4 (LUT6)
-    20: i_933/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-    21: i_933/I5 (LUT6)
-    22: i_545/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Inferred a: "set_disable_timing -from I5 -to O i_545"
-Found timing loop:
-     0: i_589/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_589/I5 (LUT6)
-     2: i_591/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     3: i_591/I0 (LUT6)
-     4: i_594/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     5: i_594/I2 (LUT6)
-     6: i_651/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     7: i_651/I3 (LUT6)
-     8: i_652/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     9: i_652/I4 (LUT6)
-    10: i_933/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-    11: i_933/I5 (LUT6)
-    12: i_545/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-    13: i_545/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Inferred a: "set_disable_timing -from I5 -to O i_589"
-Found timing loop:
-     0: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     1: i_930/I3 (LUT6)
-     2: i_33/O (LUT5)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     3: i_33/I4 (LUT5)
-     4: i_624/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     5: i_624/I4 (LUT6)
-     6: i_637/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     7: i_637/I4 (LUT6)
-     8: i_640/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     9: i_640/I1 (LUT6)
-    10: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Inferred a: "set_disable_timing -from I3 -to O i_930"
-Found timing loop:
-     0: i_930/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     1: i_930/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_635/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_635/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/I3 (LUT6)
-     2: i_923/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-     3: i_923/I4 (LUT6)
-     4: i_589/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     5: i_589/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Inferred a: "set_disable_timing -from I3 -to O i_585"
-Found timing loop:
-     0: i_635/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_635/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_585/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_585/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_545/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_545/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
-Found timing loop:
-     0: i_635/O (LUT6)
-      [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:128]
-     1: i_635/O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:14]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -479,37 +258,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -526,46 +305,45 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |     7|
-|2     |LUT1   |     7|
-|3     |LUT2   |    31|
-|4     |LUT3   |    51|
-|5     |LUT4   |    50|
-|6     |LUT5   |    81|
-|7     |LUT6   |   561|
-|8     |MUXF7  |   122|
-|9     |MUXF8  |    56|
-|10    |FDCE   |  1208|
+|2     |LUT1   |     4|
+|3     |LUT2   |    83|
+|4     |LUT3   |    38|
+|5     |LUT4   |    74|
+|6     |LUT5   |   117|
+|7     |LUT6   |   623|
+|8     |MUXF7  |   159|
+|9     |MUXF8  |     2|
+|10    |FDCE   |  1148|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |  2174|
-|2     |  game_i |game   |  1150|
+|1     |top      |       |  2255|
+|2     |  game_i |game   |  1231|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 25 critical warnings and 670 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Synthesis finished with 0 errors, 0 critical warnings and 963 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1284.152 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 185 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1285.059 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 168 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1284.152 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.059 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: df746ddf
+Synth Design complete, checksum: 3685fb5c
 INFO: [Common 17-83] Releasing license: Synthesis
-20 Infos, 104 Warnings, 25 Critical Warnings and 0 Errors encountered.
+20 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1284.152 ; gain = 0.000
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 1285.059 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/xilinxprj/game.runs/synth_1/gameAndReg32x32.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file gameAndReg32x32_utilization_synth.rpt -pb gameAndReg32x32_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 13 14:31:34 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 14 20:28:40 2022...

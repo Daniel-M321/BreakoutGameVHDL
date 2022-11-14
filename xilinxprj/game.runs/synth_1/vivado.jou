@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sun Nov 13 14:30:54 2022
-# Process ID: 49764
+# Start of session at: Mon Nov 14 20:27:59 2022
+# Process ID: 44880
 # Current directory: C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/xilinxprj/game.runs/synth_1
 # Command line: vivado.exe -log gameAndReg32x32.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gameAndReg32x32.tcl
 # Log file: C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/xilinxprj/game.runs/synth_1/gameAndReg32x32.vds

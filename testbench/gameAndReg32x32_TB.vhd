@@ -99,7 +99,7 @@ begin
 -- 0003e000040000020204000000000000
   reg4x32_CSRB                 <= ( others => (others => '0') ); -- clear all CSRA array         
 
-  reg4x32_CSRB(3)              <= X"0003e000";     -- paddleVec  
+  reg4x32_CSRB(3)              <= X"0007c000";     -- paddleVec  
 
   reg4x32_CSRB(2)(31 downto 24)<= "00000" & "100"; -- ball direction (2:0)   
   reg4x32_CSRB(2)(19 downto  0)<= X"00002";        -- dlyCount(19:0) 
@@ -121,15 +121,30 @@ begin
   go     				<= '0';   
   wait for 20*period;  
   reg4x32_CSRB       <= ( others => (others => '0') ); -- clear all CSRB array         
-  reg4x32_CSRB(0)(9 downto 8) <= "10"; -- assert left control bit        
-  wait for 20*period;  
-  reg4x32_CSRB(0)(9 downto 8) <= "01"; -- assert right control bit        
-  wait for 200*period;  
-  reg4x32_CSRB(0)(9 downto 8) <= "10"; -- assert left control bit        
+--  reg4x32_CSRB(0)(9 downto 8) <= "10"; -- assert left control bit        
+--  wait for 20*period;  
+--  reg4x32_CSRB(0)(9 downto 8) <= "01"; -- assert right control bit        
+--  wait for 200*period;  
+--  reg4x32_CSRB(0)(9 downto 8) <= "10"; -- assert left control bit        
   wait for 200*period;  
   
 
-  wait for 2000*period;  
+  wait for 500*period; -- 20 ns = 1 period up and down takes just les then 10000ns 
+  
+  go <= '1';
+  
+  wait for 10*period;
+  
+  go <= '0';
+  
+  wait for 300*period; -- 20 ns = 1 period up and down takes just les then 10000ns 
+
+  
+  
+  
+  
+  
+  
   
   endOfSim 				<= true;  -- assert flag. Stops clk signal generation in process clkStim
   report "simulation done";   
