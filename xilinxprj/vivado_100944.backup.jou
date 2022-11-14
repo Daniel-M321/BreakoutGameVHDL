@@ -2,22 +2,17 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sun Nov 13 14:28:38 2022
-# Process ID: 20288
+# Start of session at: Sun Nov 13 14:23:26 2022
+# Process ID: 100944
 # Current directory: C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/xilinxprj
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent76980 C:\Users\user\Documents\SOC2\Repo2\BreakoutGameVHDL\xilinxprj\game.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent96180 C:\Users\user\Documents\SOC2\Repo2\BreakoutGameVHDL\xilinxprj\game.xpr
 # Log file: C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/xilinxprj/vivado.log
 # Journal file: C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/xilinxprj\vivado.jou
 # Running On: LENP53PF21AEA6, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 16936 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/xilinxprj/game.xpr
+open_project {C:/Users/user/Desktop/4th year/BreakOutGame/game/game/xilinxprj/game.xpr}
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 6
 wait_on_run synth_1
-open_run synth_1 -name synth_1
-launch_simulation
-open_wave_config C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/testbench/gameAndReg32x32_TB_behav.wcfg
-source gameAndReg32x32_TB.tcl
-close_sim
