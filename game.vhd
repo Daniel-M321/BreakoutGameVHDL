@@ -146,11 +146,11 @@ begin
 
 		when setupGameParameters =>  
 			NSWallVec           <= X"3FFFFFFF";
-			NSBallXAdd 	        <= 30;
-			NSBallYAdd 	        <= 14;
+			NSBallXAdd 	        <= 29;
+			NSBallYAdd 	        <= 13;
 			NSLives             <= 1;
 			NSScore             <= 0;
-			NSBallVec           <= X"40000000";
+			NSBallVec           <= X"20000000";
 
 			NSPaddleVec         <= X"001f0000";
 			NSBallDir           <= "110";
@@ -252,30 +252,31 @@ begin
 				elsif CSBallYAdd = 15 then                              -- ball is in the wall
 				    zone <= 6;
 				    if CSBallXAdd = 31 then
-				        NS <= SW;
-				    elsif CSBallXAdd = 31 then
 				        NS <= SE;
-				    end if;
-				    case CSBallDir(2 downto 0) is                       
-						when "100" => NS <= S;                          -- if we going north, go south
-						when "101" =>                                   -- going NE
-						    if CSWallVec(CSBallXAdd - 1) = '1' then     -- check if wall piece
-						        NSWallVec(CSBallXAdd - 1) <= '0';       -- remove wall piece
-						        NSScore <= CSScore +1;
-						        NS <= SW;                               -- mirror bounce
-						    else
-						        NS <= SE;                               -- else we hit very top wall
-						    end if;
-						when "110" =>                                   -- going NW
-					        if CSWallVec(CSBallXAdd + 1) = '1' then     -- check wall piece
-						        NSWallVec(CSBallXAdd + 1) <= '0';       -- remove wall piece
-						        NSScore <= CSScore +1;
-						        NS <= SE;                               -- mirror bounce
-						    else
-						        NS <= SW;                              
-						    end if;
-                        when others => null; 
-					end case;
+				    elsif CSBallXAdd = 0 then
+				        NS <= SW;
+				    else
+                        case CSBallDir(2 downto 0) is                       
+                            when "100" => NS <= S;                          -- if we going north, go south
+                            when "101" =>                                   -- going NE
+                                if CSWallVec(CSBallXAdd - 1) = '1' then     -- check if wall piece
+                                    NSWallVec(CSBallXAdd - 1) <= '0';       -- remove wall piece
+                                    NSScore <= CSScore +1;
+                                    NS <= SW;                               -- mirror bounce
+                                else
+                                    NS <= SE;                               -- else we hit very top wall
+                                end if;
+                            when "110" =>                                   -- going NW
+                                if CSWallVec(CSBallXAdd + 1) = '1' then     -- check wall piece
+                                    NSWallVec(CSBallXAdd + 1) <= '0';       -- remove wall piece
+                                    NSScore <= CSScore +1;
+                                    NS <= SE;                               -- mirror bounce
+                                else
+                                    NS <= SW;                              
+                                end if;
+                            when others => null; 
+                        end case;
+					end if;
 					NSWallVec(CSBallXAdd) <= '0';                       -- remove ball in wall for next state
 			     
 				elsif CSBallXAdd = 31 then                                                       -- left wall

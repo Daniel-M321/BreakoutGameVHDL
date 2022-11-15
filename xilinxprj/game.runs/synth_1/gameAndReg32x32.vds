@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Nov 15 15:52:55 2022
-# Process ID: 13592
+# Start of session at: Tue Nov 15 19:22:17 2022
+# Process ID: 12036
 # Current directory: C:/vicilogic/game/xilinxprj/game.runs/synth_1
 # Command line: vivado.exe -log gameAndReg32x32.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gameAndReg32x32.tcl
 # Log file: C:/vicilogic/game/xilinxprj/game.runs/synth_1/gameAndReg32x32.vds
@@ -11,17 +11,17 @@
 # Running On: LAPTOP-IIOCOLJD, OS: Windows, CPU Frequency: 3094 MHz, CPU Physical cores: 2, Host memory: 8018 MB
 #-----------------------------------------------------------
 source gameAndReg32x32.tcl -notrace
-create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 393.086 ; gain = 64.445
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 393.656 ; gain = 69.012
 Command: synth_design -top gameAndReg32x32 -part xc7z020clg400-1 -no_iobuf
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10308
+INFO: [Synth 8-7075] Helper process launched with PID 17680
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 832.391 ; gain = 414.453
+Starting Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 831.367 ; gain = 412.848
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'gameAndReg32x32' [C:/vicilogic/game/gameAndReg32x32.vhd:32]
 INFO: [Synth 8-3491] module 'game' declared at 'C:/vicilogic/game/game.vhd:41' bound to instance 'game_i' of component 'game' [C:/vicilogic/game/gameAndReg32x32.vhd:46]
@@ -132,17 +132,17 @@ WARNING: [Synth 8-7129] Port reg4x32_CSRB[3][31] in module game is either unconn
 WARNING: [Synth 8-7129] Port reg4x32_CSRB[3][30] in module game is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 933.492 ; gain = 515.555
+Finished Synthesize : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 932.418 ; gain = 513.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 933.492 ; gain = 515.555
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 932.418 ; gain = 513.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 933.492 ; gain = 515.555
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 932.418 ; gain = 513.898
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'game'
@@ -174,7 +174,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'game'
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'one-hot' in module 'game'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 974.582 ; gain = 556.645
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 975.684 ; gain = 557.164
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -233,20 +233,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:23 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:38 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Timing Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:01:26 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:37 ; elapsed = 00:01:41 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -264,37 +264,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:02 ; elapsed = 00:02:07 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished IO Insertion : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:02 ; elapsed = 00:02:07 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,18 +331,18 @@ Report Instance Areas:
 |2     |  game_i |game   |  1411|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 963 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 1287.047 ; gain = 869.109
-Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 1287.047 ; gain = 869.109
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
+Synthesis Optimization Complete : Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 1288.016 ; gain = 869.496
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1287.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1288.016 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 151 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1287.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1288.016 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -350,7 +350,7 @@ Synth Design complete, checksum: 4f0a5df5
 INFO: [Common 17-83] Releasing license: Synthesis
 21 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:02:15 . Memory (MB): peak = 1287.047 ; gain = 893.961
+synth_design: Time (s): cpu = 00:01:57 ; elapsed = 00:01:59 . Memory (MB): peak = 1288.016 ; gain = 894.359
 INFO: [Common 17-1381] The checkpoint 'C:/vicilogic/game/xilinxprj/game.runs/synth_1/gameAndReg32x32.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file gameAndReg32x32_utilization_synth.rpt -pb gameAndReg32x32_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 15 15:55:35 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 15 19:24:38 2022...
