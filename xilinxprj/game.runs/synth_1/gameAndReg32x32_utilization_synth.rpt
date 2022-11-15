@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Nov 15 15:55:35 2022
+| Date         : Tue Nov 15 19:24:38 2022
 | Host         : LAPTOP-IIOCOLJD running 64-bit major release  (build 9200)
 | Command      : report_utilization -file gameAndReg32x32_utilization_synth.rpt -pb gameAndReg32x32_utilization_synth.pb
 | Design       : gameAndReg32x32
