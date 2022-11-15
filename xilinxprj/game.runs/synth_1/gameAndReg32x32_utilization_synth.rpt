@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Mon Nov 14 23:16:46 2022
+| Date         : Tue Nov 15 15:03:21 2022
 | Host         : LAPTOP-IIOCOLJD running 64-bit major release  (build 9200)
 | Command      : report_utilization -file gameAndReg32x32_utilization_synth.rpt -pb gameAndReg32x32_utilization_synth.pb
 | Design       : gameAndReg32x32
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  754 |     0 |          0 |     53200 |  1.42 |
-|   LUT as Logic          |  754 |     0 |          0 |     53200 |  1.42 |
+| Slice LUTs*             | 1046 |     0 |          0 |     53200 |  1.97 |
+|   LUT as Logic          | 1046 |     0 |          0 |     53200 |  1.97 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
-| Slice Registers         | 1149 |     0 |          0 |    106400 |  1.08 |
-|   Register as Flip Flop | 1149 |     0 |          0 |    106400 |  1.08 |
-|   Register as Latch     |    0 |     0 |          0 |    106400 |  0.00 |
-| F7 Muxes                |  139 |     0 |          0 |     26600 |  0.52 |
-| F8 Muxes                |    4 |     0 |          0 |     13300 |  0.03 |
+| Slice Registers         | 1198 |     0 |          0 |    106400 |  1.13 |
+|   Register as Flip Flop | 1166 |     0 |          0 |    106400 |  1.10 |
+|   Register as Latch     |   32 |     0 |          0 |    106400 |  0.03 |
+| F7 Muxes                |   48 |     0 |          0 |     26600 |  0.18 |
+| F8 Muxes                |    1 |     0 |          0 |     13300 | <0.01 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -56,8 +56,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 1149  |          Yes |           - |        Reset |
+| 1     |          Yes |           - |          Set |
+| 1197  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -148,16 +148,18 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     | 1149 |        Flop & Latch |
-| LUT6     |  582 |                 LUT |
-| MUXF7    |  139 |               MuxFx |
-| LUT5     |  132 |                 LUT |
-| LUT4     |   57 |                 LUT |
-| LUT3     |   46 |                 LUT |
-| LUT2     |   37 |                 LUT |
-| CARRY4   |    7 |          CarryLogic |
-| MUXF8    |    4 |               MuxFx |
-| LUT1     |    1 |                 LUT |
+| FDCE     | 1165 |        Flop & Latch |
+| LUT6     |  749 |                 LUT |
+| LUT5     |  183 |                 LUT |
+| LUT2     |  119 |                 LUT |
+| LUT3     |   84 |                 LUT |
+| MUXF7    |   48 |               MuxFx |
+| LUT4     |   44 |                 LUT |
+| LDCE     |   32 |        Flop & Latch |
+| CARRY4   |    8 |          CarryLogic |
+| LUT1     |    6 |                 LUT |
+| MUXF8    |    1 |               MuxFx |
+| FDPE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
 
