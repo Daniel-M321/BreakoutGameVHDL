@@ -61,7 +61,7 @@ end game;
 architecture RTL of game is
 -- Internal signal declarations
 -- <include new states>
-type stateType is (idle, writeToCSR0, setupGameParameters, initGameArena, initBall, initPaddle, initLives, initScore, waitState, processPaddle, processBall, writeBallToMem, writeWallToMem, writeScoretoMem, writeLivestoMem, endGame, NW, N, NE, SE, S, SW); -- declare enumerated state type
+type stateType is (idle, writeToCSR0, setupGameParameters, initGameArena, initBall, initPaddle, initLives, initScore, waitState, processPaddle, processBall, writeBallToMem, writePaddleToMem, writeWallToMem, writeScoretoMem, writeLivestoMem, endGame, NW, N, NE, SE, S, SW); -- declare enumerated state type
 signal NS, CS                                   : stateType; -- declare FSM state 
 								                
 signal NSWallVec, CSWallVec                     : std_logic_vector(31 downto 0);
@@ -128,15 +128,7 @@ begin
 				if    reg4x32_CSRA(0)(10 downto 8) = "000" then -- initialise game values and progress to init game arena states 
 					NS 					<= setupGameParameters;							
 				elsif reg4x32_CSRA(0)(10 downto 8) = "001" then -- play game
-					NSDlyCount          <= 0;                   -- clear delay counters  
-					NSPaddleNumDlyCount <= 0;  
-					NSBallNumDlyCount   <= 0;
-	    		   	NSBallNumDlyCount   <= 0;
-                    wr <= '1';
-                    add(7 downto 5)     <= "010";                                                 -- reg32x32 memory bank select 
-                    add(4 downto 0)     <= std_logic_vector( to_unsigned(CSBallYAdd, 5) );        -- current row address 
-                    datToMem            <= (others => '0');	
-					NS                  <= N;
+					NS <= waitState;
                         
 				end if;
 			end if;
@@ -158,7 +150,7 @@ begin
 			NSScore             <= 0;
 			NSBallVec           <= X"00010000";
 
-			NSPaddleVec         <= X"0007c000";
+			NSPaddleVec         <= X"001f0000";
 			NSBallDir           <= "100";
 			NSDlyCountMax       <= 2;                 
 			NSPaddleNumDlyMax   <= 3;
@@ -185,7 +177,6 @@ begin
 			wr   	      <= '1';
 			add	          <= "010" & std_logic_vector( to_unsigned(CSBallYAdd,5) );  
 			datToMem      <= CSBallVec;
-			NSBallDir      <= "100";
            	NS            <= initPaddle;
 		when initPaddle =>
 			wr   	      <= '1';
@@ -214,7 +205,6 @@ begin
 				        wr   	      <= '1';
 					    add	          <= "010" & "00010";   -- reg32x32 row 2, paddle row address 
 					    datToMem      <= reg32x32_dOut(30 downto 0) & '0'; 
-					    datToMem      <= reg32x32_dOut(30 downto 0) & '0';
 					    NSPaddleVec   <= reg32x32_dOut(30 downto 0) & '0';
 				    end if;
 			      elsif reg4x32_CSRB(0)(8) = '1' then       -- if 1 in (8) -> shift paddle right 
@@ -242,16 +232,6 @@ begin
 			   add(4 downto 0)     <= std_logic_vector( to_unsigned(CSBallYAdd, 5) );        -- current row address 
 			   datToMem            <= (others => '0');	
 
-               -- < instructions>		      
-			   -- Perform ball zone checks with respect to boundaries, wall, paddle. 
-			   -- Assign signal zone, for reference only
-		       -- Update ball X/Y, directon, score, lives, wall. 
-		       -- Check if end game
-	 	       -- loop to waitState or progress to endGame
-		
-			   -- Check if ZoneCentral Y4To13_X1To30, up or down  
-			   
-			   -- Step 1 find the zone in this state, we have 
 				if CSBallYAdd >= 4 and CSBallYAdd <= 13 and CSBallXAdd >= 1 and CSBallXAdd <= 30 then  
 					zone <= 1;
 			     			      
@@ -272,14 +252,11 @@ begin
 						add	<= "010" & "00010";                                                 -- paddle row
 						if reg32x32_dOut(31) = '1' then                                           -- if paddle
 							NS <= NE;
-                        
+ 
 						else                                                                      -- else lose a life
 							NSLives <= CSLives - 1;
 							if NSLives > 0 then                                                       -- if we have more lives reset ball and paddle
-								NS <= writeLivestoMem;
-								NSBallXAdd <= 16;                                                     -- ball back to middle above paddle
-								NSBallYAdd <= 4;
-								NSWallVec <= X"0007c000";                   
+								NS <= writeLivestoMem;                  
 							end if;
 						end if;
              	      
@@ -314,9 +291,6 @@ begin
 							NSLives <= CSLives - 1;
 							if NSLives > 0 then                                                   -- TODO Is ballVec being updated anywhere?
 								NS <= writeLivestoMem;
-								NSBallXAdd <= 16;                                                 -- ball back to middle above paddle
-								NSBallYAdd <= 4;
-								NSPaddleVec <= X"0007c000";      -- PaddleVector Getting Put Back in the middle
 							end if;
 						end if;
              	      
@@ -355,7 +329,9 @@ begin
 				else                                                                             -- just above paddle
 					zone <= 2;
 					if CSPaddleVec(CSBallXAdd) = '1' then                                    -- if paddle and ball beside each other
-						if CSPaddleVec(CSBallXAdd - 1) = '0' then                            -- right side of paddle
+					    if CSBallDir(2) = '1' then                         -- if going north in anyway
+					        NS <= N; 
+						elsif CSPaddleVec(CSBallXAdd - 1) = '0' then                            -- right side of paddle
 							if CSBallDir = "010" then                                       -- Coming in from East
                                 NS <= N;
                             else 
@@ -372,17 +348,14 @@ begin
 								when "000" => NS <= N;
 								when "001" => NS <= NE;
 								when "010" => NS <= NW;
-								when others => NS <= N; 
+								when others => null; 
 							end case;  
 						end if;                
                                                         
 					else                                                                         -- else we lose a lfe
 						NSLives <= CSLives - 1;
 						if NSLives > 0 then                                                       -- if we have more lifes reset ball and paddle
-							NS <= writeLivestoMem;
-							NSBallXAdd <= 16;                                                     -- ball back to middle above paddle
-							NSBallYAdd <= 3;
-							NSWallVec <= X"0007c000";                   
+							NS <= writeLivestoMem;                  
 						end if;
 					end if;
 			       
@@ -402,37 +375,68 @@ begin
             NSBallXAdd <= CSBallXAdd + 1;                                         
 			NSBallYAdd <= CSBallYAdd + 1;
             NsBallDir <= "110";		
-			NS <= writeBallToMem;		
+			NS <= writeWallToMem;		
       
 		when N =>                                                           -- BB State for N Direction
             NSBallXAdd <= CSBallXAdd;                                         
             NSBallYAdd <= CSBallYAdd + 1;
             NsBallDir <= "100";     		
-			NS <= writeBallToMem;		
+			NS <= writeWallToMem;		
 			 
 		when NE =>                                                          -- BB State for NE active 
             NSBallXAdd <= CSBallXAdd - 1;                                         
             NSBallYAdd <= CSBallYAdd + 1;
             NsBallDir <= "101";                                                            
-			NS <= writeBallToMem;		
+			NS <= writeWallToMem;		
 			 			 
 		when SE =>                                                          -- BB State for SE Direction
             NSBallXAdd <= CSBallXAdd - 1;                                         
             NSBallYAdd <= CSBallYAdd - 1;
             NsBallDir <= "001";		
-			NS <= writeBallToMem;		
+			NS <= writeWallToMem;		
 			 
 		when S =>                                                           -- BB State for S Direction
             NSBallXAdd <= CSBallXAdd; 
             NSBallYAdd <= CSBallYAdd - 1;
             NsBallDir <= "000";	
-			NS <= writeBallToMem;	
+			NS <= writeWallToMem;	
 			 	
 		when SW =>                                                          -- BB State for S Direction
             NSBallXAdd <= CSBallXAdd + 1;
             NSBallYAdd <= CSBallYAdd - 1;
             NsBallDir <= "010";		
-			NS <= writeBallToMem;				 
+			NS <= writeWallToMem;	
+			
+		when writeLivestoMem =>
+		    NSBallXAdd <= 16;                                                 -- ball back to middle above paddle
+			NSBallYAdd <= 3;
+			NSPaddleVec <= X"0007c000";      -- PaddleVector Getting Put Back in the middle
+			NsBallDir <= "100";
+		    wr                       <= '1'; 
+			add           <= "010" & "00001";               -- reg32x32 row 1
+			datToMem      <= (others => '0');							     -- clear vector  
+			datToMem      <= std_logic_vector( to_unsigned(CSLives, 32) );
+			NS <= writePaddleToMem;	
+			
+		when writePaddleToMem =>
+		    wr                       <= '1'; 
+			add           <= "010" & "00010";               -- reg32x32 row 1
+			datToMem      <= (others => '0');							     -- clear vector  
+			datToMem      <= CSPaddleVec;
+			NS <= writeBallToMem;
+			
+		when writeWallToMem =>         --FIXME is the best decision? we can defo move these around    
+	        wr                       <= '1'; 	                                              -- write new Wall row
+			add           <= "010" & "01111";               -- reg32x32 row 15
+			datToMem      <= CSWallVec;
+			NS <= writeScoretoMem;	
+			
+		when writeScoretoMem =>
+		    wr                       <= '1'; 
+			add           <= "01000000";               -- reg32x32 row 0
+	   		datToMem      <= (others => '0');							     -- clear vector  
+			datToMem      <= std_logic_vector( to_unsigned(CSScore, 32) );
+			NS <= writeBallToMem;	 
 			
 		when writeBallToMem =>                                                           -- write new ball row
             wr                       <= '1'; 					        			      
@@ -440,27 +444,7 @@ begin
             add(4 downto 0)          <= std_logic_vector( to_unsigned(CSBallYAdd, 5) ); -- row address
 	   		datToMem                 <= (others => '0');							     -- clear vector  
    	        datToMem( to_integer(to_unsigned(CSBallXAdd, 5)) ) <= '1';                  -- ball bit asserted
-			NS <= writeWallToMem;
-			 
-	    when writeWallToMem =>         --FIXME is the best decision?    
-	        wr                       <= '1'; 	                                              -- write new Wall row
-			add           <= "010" & "01111";               -- reg32x32 row 15
-			datToMem      <= CSWallVec;
-			NS <= writeScoretoMem;
-			
-		when writeScoretoMem =>
-		    wr                       <= '1'; 
-			add           <= "01000000";               -- reg32x32 row 0
-	   		datToMem      <= (others => '0');							     -- clear vector  
-			datToMem      <= std_logic_vector( to_unsigned(CSScore, 32) );
 			NS <= waitState;
-			
-		when writeLivestoMem =>
-		    wr                       <= '1'; 
-			add           <= "010" & "00001";               -- reg32x32 row 1
-			datToMem      <= (others => '0');							     -- clear vector  
-			datToMem      <= std_logic_vector( to_unsigned(CSLives, 32) );
-			NS <= initBall;
 		
 
 		when endGame =>                          

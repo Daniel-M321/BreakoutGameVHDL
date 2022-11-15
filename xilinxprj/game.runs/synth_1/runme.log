@@ -4,29 +4,31 @@
 
 
 
-****** Vivado v2022.1 (64-bit)
-  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
-  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source gameAndReg32x32.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 392.941 ; gain = 67.531
 Command: synth_design -top gameAndReg32x32 -part xc7z020clg400-1 -no_iobuf
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 41456
+INFO: [Synth 8-7075] Helper process launched with PID 14784
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 832.770 ; gain = 414.996
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'gameAndReg32x32' [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:32]
-INFO: [Synth 8-3491] module 'game' declared at 'C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:41' bound to instance 'game_i' of component 'game' [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'game' [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:61]
-WARNING: [Synth 8-614] signal 'CSBallVec' is read in the process but is not in the sensitivity list [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:97]
-WARNING: [Synth 8-614] signal 'NSLives' is read in the process but is not in the sensitivity list [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:97]
-INFO: [Synth 8-256] done synthesizing module 'game' (0#1) [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/game.vhd:61]
-INFO: [Synth 8-256] done synthesizing module 'gameAndReg32x32' (0#1) [C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/gameAndReg32x32.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'gameAndReg32x32' [C:/vicilogic/game/gameAndReg32x32.vhd:32]
+INFO: [Synth 8-3491] module 'game' declared at 'C:/vicilogic/game/game.vhd:41' bound to instance 'game_i' of component 'game' [C:/vicilogic/game/gameAndReg32x32.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'game' [C:/vicilogic/game/game.vhd:61]
+WARNING: [Synth 8-614] signal 'CSBallVec' is read in the process but is not in the sensitivity list [C:/vicilogic/game/game.vhd:97]
+WARNING: [Synth 8-614] signal 'NSLives' is read in the process but is not in the sensitivity list [C:/vicilogic/game/game.vhd:97]
+INFO: [Synth 8-256] done synthesizing module 'game' (0#1) [C:/vicilogic/game/game.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'gameAndReg32x32' (0#1) [C:/vicilogic/game/gameAndReg32x32.vhd:32]
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][31] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][30] in module game is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reg4x32_CSRA[3][29] in module game is either unconnected or has no load
@@ -129,17 +131,17 @@ WARNING: [Synth 8-7129] Port reg4x32_CSRB[3][31] in module game is either unconn
 WARNING: [Synth 8-7129] Port reg4x32_CSRB[3][30] in module game is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 930.852 ; gain = 513.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 930.852 ; gain = 513.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 930.852 ; gain = 513.078
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'game'
@@ -151,27 +153,27 @@ INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'game'
            initgamearena |                            00010 |                            00011
                initlives |                            00011 |                            00110
                initscore |                            00100 |                            00111
-                       n |                            00101 |                            10001
-          writeballtomem |                            00110 |                            01011
-          writewalltomem |                            00111 |                            01100
-         writescoretomem |                            01000 |                            01101
-               waitstate |                            01001 |                            01000
-           processpaddle |                            01010 |                            01001
-             processball |                            01011 |                            01010
-                 endgame |                            01100 |                            01111
-                       s |                            01101 |                            10100
-                      se |                            01110 |                            10011
-                      sw |                            01111 |                            10101
-                      ne |                            10000 |                            10010
-                      nw |                            10001 |                            10000
-         writelivestomem |                            10010 |                            01110
-                initball |                            10011 |                            00100
-              initpaddle |                            10100 |                            00101
-             writetocsr0 |                            10101 |                            00001
+                initball |                            00101 |                            00100
+              initpaddle |                            00110 |                            00101
+                       n |                            00111 |                            10001
+          writewalltomem |                            01000 |                            01100
+         writescoretomem |                            01001 |                            01101
+          writeballtomem |                            01010 |                            01011
+               waitstate |                            01011 |                            01000
+           processpaddle |                            01100 |                            01001
+             processball |                            01101 |                            01010
+                 endgame |                            01110 |                            01111
+             writetocsr0 |                            01111 |                            00001
+                       s |                            10000 |                            10100
+                      se |                            10001 |                            10011
+                      sw |                            10010 |                            10101
+                      ne |                            10011 |                            10010
+                      nw |                            10100 |                            10000
+         writelivestomem |                            10101 |                            01110
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'game'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:29 . Memory (MB): peak = 935.992 ; gain = 518.219
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -188,27 +190,26 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 8     
 	                3 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 11    
+	   2 Input   32 Bit        Muxes := 9     
+	   4 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 1     
 	  22 Input   32 Bit        Muxes := 4     
-	   3 Input   31 Bit        Muxes := 1     
-	   2 Input   31 Bit        Muxes := 3     
+	   2 Input   31 Bit        Muxes := 2     
 	   2 Input   21 Bit        Muxes := 1     
 	  22 Input   21 Bit        Muxes := 1     
-	   2 Input   19 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 7     
 	   3 Input    8 Bit        Muxes := 1     
 	  22 Input    8 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 7     
-	   3 Input    5 Bit        Muxes := 1     
 	  22 Input    5 Bit        Muxes := 6     
 	  57 Input    5 Bit        Muxes := 1     
 	  22 Input    3 Bit        Muxes := 1     
 	  22 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 19    
-	   3 Input    1 Bit        Muxes := 33    
+	   2 Input    1 Bit        Muxes := 17    
 	   4 Input    1 Bit        Muxes := 3     
 	   8 Input    1 Bit        Muxes := 1     
 	  22 Input    1 Bit        Muxes := 12    
+	   3 Input    1 Bit        Muxes := 32    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -227,20 +228,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:01:16 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -258,37 +259,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -305,45 +306,45 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |     7|
-|2     |LUT1   |     4|
-|3     |LUT2   |    83|
-|4     |LUT3   |    38|
-|5     |LUT4   |    74|
-|6     |LUT5   |   117|
-|7     |LUT6   |   623|
-|8     |MUXF7  |   159|
-|9     |MUXF8  |     2|
-|10    |FDCE   |  1148|
+|2     |LUT1   |     1|
+|3     |LUT2   |    37|
+|4     |LUT3   |    46|
+|5     |LUT4   |    57|
+|6     |LUT5   |   132|
+|7     |LUT6   |   582|
+|8     |MUXF7  |   139|
+|9     |MUXF8  |     4|
+|10    |FDCE   |  1149|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |  2255|
-|2     |  game_i |game   |  1231|
+|1     |top      |       |  2154|
+|2     |  game_i |game   |  1130|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 1258.789 ; gain = 841.016
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 963 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 1258.789 ; gain = 841.016
+Synthesis Optimization Complete : Time (s): cpu = 00:01:36 ; elapsed = 00:01:42 . Memory (MB): peak = 1258.789 ; gain = 841.016
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1285.059 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 168 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1258.789 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 150 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1264.172 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 3685fb5c
+Synth Design complete, checksum: 8af514d3
 INFO: [Common 17-83] Releasing license: Synthesis
-20 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+21 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 1285.059 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/user/Documents/SOC2/Repo2/BreakoutGameVHDL/xilinxprj/game.runs/synth_1/gameAndReg32x32.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:01:49 . Memory (MB): peak = 1264.172 ; gain = 871.230
+INFO: [Common 17-1381] The checkpoint 'C:/vicilogic/game/xilinxprj/game.runs/synth_1/gameAndReg32x32.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file gameAndReg32x32_utilization_synth.rpt -pb gameAndReg32x32_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 14 20:28:40 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 14 23:16:46 2022...
