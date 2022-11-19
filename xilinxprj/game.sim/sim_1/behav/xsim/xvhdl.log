@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/vicilogic/game/game.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'game'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/vicilogic/game/testbench/gameAndReg32x32_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'gameAndReg32x32_TB'
