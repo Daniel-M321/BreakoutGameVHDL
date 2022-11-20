@@ -1,7 +1,7 @@
 -- Description: breakout game component
 -- FSM-based design 
 
--- Engineers: Daniel Millet & Ben Moran
+-- Engineers: Daniel Millett & Ben Moran
 -- Date: 01/11/2022
 -- 
 -- 16 x 32-bit game array, using reg32x32(15 downto 0)(31:0)
