@@ -87,7 +87,6 @@ signal NSBallNumDlyMax, CSBallNumDlyMax         : integer range 0 to 31;
 signal NSBallNumDlyCount, CSBallNumDlyCount     : integer range 0 to 31;
 
 signal zone 									: integer; 
-constant counter : integer := 8;
 
 begin
 
@@ -158,19 +157,6 @@ begin
 			NSPaddleNumDlyMax   <= to_integer( unsigned(reg4x32_CSRB(1)(28 downto 24)) );
 			NSBallNumDlyMax     <= to_integer( unsigned(reg4x32_CSRB(1)(20 downto 16)) );
 			NS                  <= initGameArena;
---			NSWallVec           <= X"3FFFFFFF";
---			NSBallXAdd 	        <= 29;
---			NSBallYAdd 	        <= 13;
---			NSLives             <= 1;
---			NSScore             <= 0;
---			NSBallVec           <= X"20000000";
-
---			NSPaddleVec         <= X"001f0000";
---			NSBallDir           <= "110";
---			NSDlyCountMax       <= 2;                 
---			NSPaddleNumDlyMax   <= 3;
---			NSBallNumDlyMax     <= 4;
---			NS                  <= initGameArena;
 
 		when initGameArena => -- follow an initialisation sequence 
             -- write wallVec
@@ -188,7 +174,7 @@ begin
 			add	          <= "010" & "00000";               -- reg32x32 row 0 
 			datToMem      <= X"000000" & "000" & std_logic_vector( to_unsigned(CSScore, 5) );  
            	NS            <= initBall;
-		when initBall =>                                                                              -- DAN switched these around for when reseting round
+		when initBall =>                                                                              
 			wr   	      <= '1';
 			add	          <= "010" & std_logic_vector( to_unsigned(CSBallYAdd,5) );  
 			datToMem      <= CSBallVec;
@@ -313,7 +299,7 @@ begin
                             when others => null; 
 						end case;
 
-					else                               -- Top left wall
+					else                                                                       -- Top left wall
 					    zone <= 8;  
 					    if CSWallVec(31) = '1' then                                           -- if wall piece we increment score and remove it
 					       	NSScore <= CSScore + 1;
@@ -424,9 +410,7 @@ begin
 					    NS <= N;
 					
 					elsif CSPaddleVec(CSBallXAdd) = '1' then                                    -- if paddle and ball beside each other
-					    if CSBallDir(2) = '1' then                         -- if going north in anyway
-					        NS <= N; 
-						elsif CSPaddleVec(CSBallXAdd - 1) = '0' then                            -- right side of paddle
+						if CSPaddleVec(CSBallXAdd - 1) = '0' then                            -- right side of paddle
 							if CSBallDir = "010" then                                       -- Coming in from East
                                 NS <= N;
                             else 
